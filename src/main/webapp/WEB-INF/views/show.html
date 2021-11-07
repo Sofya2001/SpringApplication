@@ -2,11 +2,13 @@
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Человек</title>
+    <title>Person</title>
 </head>
 <body>
 <p th:text="${show.getName()}">VALUE</p>
 <p th:text="${show.getId()}">VALUE</p>
+<p th:text="${show.getAge()}">VALUE</p>
+<p th:text="${show.getEmail()}">VALUE</p>
 <a th:href="@{/people/{id}/edit (id=${show.getId()})}">Edit</a>
 <form th:method="DELETE" th:action="@{/people/{id} (id=${show.getId()})}">
     <input type="submit" value="Delete"/>
